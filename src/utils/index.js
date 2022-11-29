@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { APP_SECRET } = require("../config");
+const { v4: uuidv4 } = require("uuid");
 
 const GenerateSalt = async () => {
 	try {
@@ -52,6 +53,12 @@ const FormateData = (data) => {
 	}
 };
 
+const UniqueId = () => {
+	const id = uuidv4();
+	const s = id.split("-").join("").substring(0, 16);
+	return s;
+};
+
 module.exports = {
 	GenerateSalt,
 	GeneratePassword,
@@ -59,4 +66,5 @@ module.exports = {
 	GenerateSignature,
 	ValidateSignature,
 	FormateData,
+	UniqueId,
 };

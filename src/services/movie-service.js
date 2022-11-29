@@ -1,7 +1,6 @@
 const { MovieRepository } = require("../database/repository");
-const { FormateData } = require("../utils");
+const { FormateData, UniqueId } = require("../utils");
 const { APIError } = require("../utils/error/app-errors");
-const { v4: uuidv4 } = require("uuid");
 
 class MovieService {
 	constructor() {
@@ -10,7 +9,7 @@ class MovieService {
 
 	async CreateMovie({ name, rating, genre, cast, releaseDate, user }) {
 		try {
-			const id = uuidv4();
+			const id = UniqueId();
 			const movie = await this.repository.CreateMovie({
 				id,
 				name,

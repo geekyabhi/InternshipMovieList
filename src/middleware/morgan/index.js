@@ -1,4 +1,5 @@
 const morgan = require("morgan");
+require("colors");
 const { logger } = require("../../utils/winston-logger/index");
 
 const stream = {

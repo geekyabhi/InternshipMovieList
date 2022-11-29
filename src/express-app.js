@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-// const { customer, appEvents } = require("./api");
+const { user } = require("./api");
 const ErrorHandler = require("./utils/error/error-handler");
 const morganMiddleware = require("./middleware/morgan");
 module.exports = async (app, channel) => {
@@ -9,7 +9,7 @@ module.exports = async (app, channel) => {
 	app.use(express.urlencoded({ extended: true, limit: "1mb" }));
 	app.use(cors());
 
-	// customer(app, channel);
+	user(app);
 
 	app.use("/status", (req, res, next) => {
 		res.send("Customer service running properly");

@@ -14,6 +14,10 @@ module.exports = (sequelize) => {
 			type: Sequelize.STRING,
 			allowNull: false,
 		},
+		salt: {
+			type: Sequelize.STRING,
+			allowNull: false,
+		},
 		id: {
 			type: Sequelize.UUID,
 			primaryKey: true,

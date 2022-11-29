@@ -38,25 +38,29 @@ async function ensureDbExists(dbName) {
 }
 
 const ConnectDB = async () => {
-	try {
-		const { userName, password, dbName, dialect, host } = dbConfig;
+	return new Promise(async (resolve, reject) => {
+		try {
+			const { userName, password, dbName, dialect, host } = dbConfig;
 
-		// await ensureDbExists(dbName);
-		const sequelize = new Sequelize(dbName, userName, password, {
-			host,
-			dialect,
-		});
+			// await ensureDbExists(dbName);
+			const sequelize = new Sequelize(dbName, userName, password, {
+				host,
+				dialect,
+			});
 
-		const userDB = User(sequelize);
-		const moviesDB = Movies(sequelize);
-		userDB.hasMany(moviesDB);
-		db.User = userDB;
-		db.Movies = moviesDB;
+			const userDB = User(sequelize);
+			const moviesDB = Movies(sequelize);
+			userDB.hasMany(moviesDB);
+			db.User = userDB;
+			db.Movies = moviesDB;
 
-		await sequelize.sync({ alter: true });
-	} catch (e) {
-		throw Error(`Database cannot be connected ${e}`);
-	}
+			// await sequelize.sync({ alter: true, force: true });
+
+			resolve("Database connected");
+		} catch (e) {
+			reject(`Database cannot be connected ${e}`);
+		}
+	});
 };
 
-module.exports = { ConnectDB, db };
+module.exports = { ConnectDB, db: db };

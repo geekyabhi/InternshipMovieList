@@ -6,4 +6,5 @@ module.exports = {
 	DBUSER: process.env.DBUSER,
 	DBNAME: process.env.DBNAME,
 	DBDIALECT: process.env.DBDIALECT,
+	APP_SECRET: process.env.APP_SECRET,
 };

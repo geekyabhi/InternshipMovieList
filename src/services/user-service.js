@@ -82,6 +82,17 @@ class UserService {
 			throw new APIError(e);
 		}
 	}
+
+	async GetProfile({ id }) {
+		try {
+			const existingCustomer = await this.repository.FindUserById({
+				id,
+			});
+			return FormateData(existingCustomer);
+		} catch (e) {
+			throw new APIError(e);
+		}
+	}
 }
 
 module.exports = UserService;

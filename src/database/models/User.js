@@ -20,6 +20,7 @@ module.exports = (sequelize) => {
 		},
 		id: {
 			type: Sequelize.UUID,
+			allowNull: false,
 			primaryKey: true,
 		},
 		date: {

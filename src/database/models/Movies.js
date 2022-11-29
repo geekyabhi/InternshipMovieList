@@ -1,6 +1,11 @@
 const { Sequelize } = require("sequelize");
 module.exports = (sequelize) => {
 	const Movies = sequelize.define("Movies", {
+		id: {
+			type: Sequelize.UUID,
+			allowNull: false,
+			primaryKey: true,
+		},
 		name: {
 			type: Sequelize.STRING,
 			allowNull: false,

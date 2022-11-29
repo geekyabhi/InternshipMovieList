@@ -50,3 +50,41 @@
 [35m[39m
 [ [36m2022-11-29 15:15:29:1529[39m ]  [35mPOST /user/login 200 349 - 55.896 ms[39m
 [35m[39m
+[ [36m2022-11-29 15:22:32:2232[39m ]  [35mGET /users 404 144 - 6.335 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:22:56:2256[39m ]  [35mGET /users 404 144 - 2.833 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:23:01:231[39m ]  [35mGET /users/ 404 145 - 0.692 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:23:46:2346[39m ]  [35mGET /users/profile 404 152 - 5.295 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:24:08:248[39m ]  [35mGET /users/profile 404 152 - 1.914 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:24:17:2417[39m ]  [31mName : UN_AUTHORISED | Descriptiion : No token found | Status Code : 403 | IsOperational : true[39m
+[ [36m2022-11-29 15:24:17:2417[39m ]  [35mGET /user/profile 403 72 - 6.767 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:24:27:2427[39m ]  [35mPOST /user/login 200 349 - 190.348 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:24:37:2437[39m ]  [31mName : Error on finding user Error | Descriptiion : Invalid value { id | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 15:24:37:2437[39m ]  [35mGET /user/profile 500 90 - 4.047 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:24:40:2440[39m ]  [31mName : Error on finding user Error | Descriptiion : Invalid value { id | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 15:24:40:2440[39m ]  [35mGET /user/profile 500 90 - 1.861 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:25:15:2515[39m ]  [31mName : Error on finding user Error | Descriptiion : Invalid value { id | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 15:25:15:2515[39m ]  [35mGET /user/profile 500 90 - 13.733 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:25:38:2538[39m ]  [31mName : Error on finding user Error | Descriptiion : Invalid value { id | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 15:25:38:2538[39m ]  [35mGET /user/profile 500 90 - 13.711 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:26:12:2612[39m ]  [31mName : Error on finding user Error | Descriptiion : Invalid value { id | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 15:26:12:2612[39m ]  [35mGET /user/profile 500 90 - 18.118 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:26:31:2631[39m ]  [35mGET /user/profile 200 339 - 130.148 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:28:20:2820[39m ]  [35mGET /user/profile 200 339 - 118.831 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:28:41:2841[39m ]  [35mGET /user/profile 200 339 - 55.028 ms[39m
+[35m[39m
+[ [36m2022-11-29 15:30:42:3042[39m ]  [35mGET /user/profile 200 226 - 137.647 ms[39m
+[35m[39m

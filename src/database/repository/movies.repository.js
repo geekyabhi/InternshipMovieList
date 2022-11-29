@@ -1,0 +1,78 @@
+const { APIError, STATUS_CODES } = require("../../utils/error/app-errors");
+const { db } = require("../connection");
+
+class MovieRepository {
+	async CreateMovie({ name, rating, genre, cast, relaseDate, user, id }) {
+		try {
+			const movie = await db.Movies.create({
+				name,
+				rating,
+				id,
+				genre,
+				cast,
+				relaseDate,
+				user,
+			});
+			return movie;
+		} catch (e) {
+			throw new APIError(
+				"API Error",
+				STATUS_CODES.INTERNAL_ERROR,
+				`Error on creating movies ${e}`
+			);
+		}
+	}
+
+	async UpdateMovies({ name, rating, genre, cast, relaseDate, user, id }) {
+		try {
+			const existingMovie = await db.Movies.findOne({
+				where: { id: id },
+			});
+			existingMovie.name = name;
+			existingMovie.rating = rating;
+			existingMovie.genre = genre;
+			existingMovie.cast = cast;
+			existingMovie.relaseDate = relaseDate;
+			existingMovie.user = user;
+			const movie = await existingMovie.save();
+			return movie;
+		} catch (e) {
+			throw new APIError(
+				"API Error",
+				STATUS_CODES.INTERNAL_ERROR,
+				`Error on updating movies ${e}`
+			);
+		}
+	}
+
+	async DeleteMovies({ id }) {
+		try {
+			const existingMovie = await db.Movies.findOne({
+				where: { id: id },
+			});
+			await existingMovie.destroy();
+			return { status: "Deleted" };
+		} catch (e) {
+			throw new APIError(
+				"API Error",
+				STATUS_CODES.INTERNAL_ERROR,
+				`Error on deleting movies ${e}`
+			);
+		}
+	}
+
+	async FindAll(query) {
+		try {
+			const movies = await db.Movies.findAll({ where: query });
+			return movies;
+		} catch (e) {
+			throw new APIError(
+				"API Error",
+				STATUS_CODES.INTERNAL_ERROR,
+				`Error on finding movies ${e}`
+			);
+		}
+	}
+}
+
+module.exports = MovieRepository;

@@ -28,7 +28,7 @@ module.exports = (sequelize) => {
 				this.setDataValue("cast", val.join("#"));
 			},
 		},
-		relaseDate: {
+		releaseDate: {
 			type: Sequelize.DATE(6),
 		},
 		user: {

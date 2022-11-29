@@ -88,3 +88,51 @@
 [35m[39m
 [ [36m2022-11-29 15:30:42:3042[39m ]  [35mGET /user/profile 200 226 - 137.647 ms[39m
 [35m[39m
+[ [36m2022-11-29 16:18:21:1821[39m ]  [31mName : uuidv4 is not defined | Descriptiion : Internal Server Error | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:18:21:1821[39m ]  [35mPOST /movies/ 500 87 - 34.012 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:19:27:1927[39m ]  [31mName : Error on creating movies SequelizeForeignKeyConstraintError | Descriptiion : Cannot add or update a child row | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:19:27:1927[39m ]  [35mPOST /movies/ 500 136 - 73.918 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:34:49:3449[39m ]  [31mName : Error on creating movies SequelizeForeignKeyConstraintError | Descriptiion : Cannot add or update a child row | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:34:49:3449[39m ]  [35mPOST /movies/ 500 136 - 31.040 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:38:40:3840[39m ]  [31mName : Error on creating movies SequelizeForeignKeyConstraintError | Descriptiion : Cannot add or update a child row | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:38:40:3840[39m ]  [35mPOST /movies/ 500 136 - 59.288 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:41:53:4153[39m ]  [35mPOST /user/register 200 349 - 104.891 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:41:57:4157[39m ]  [35mPOST /user/login 200 349 - 63.662 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:42:01:421[39m ]  [35mGET /user/profile 200 226 - 3.472 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:42:06:426[39m ]  [35mPOST /movies/ 200 304 - 12.711 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:43:01:431[39m ]  [35mPOST /movies/ 200 329 - 12.163 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:43:21:4321[39m ]  [35mGET /mo 404 141 - 1.048 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:43:26:4326[39m ]  [35mGET /movies/ 200 631 - 4.460 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:45:39:4539[39m ]  [35mPUT /movies/ 404 146 - 0.447 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:46:16:4616[39m ]  [31mName : Error on updating movies Error | Descriptiion : WHERE parameter "user" has invalid "undefined" value | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:46:16:4616[39m ]  [35mPUT /movies/7b23d425-1c75-45db-8a48-de1b5c4da315 500 131 - 2.913 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:46:58:4658[39m ]  [31mName : Error on updating movies Error | Descriptiion : WHERE parameter "user" has invalid "undefined" value | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:46:58:4658[39m ]  [35mPUT /movies/7b23d425-1c75-45db-8a48-de1b5c4da315 500 131 - 15.160 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:48:19:4819[39m ]  [31mName : Error on updating movies Error | Descriptiion : WHERE parameter "user" has invalid "undefined" value | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:48:19:4819[39m ]  [35mPUT /movies/7b23d425-1c75-45db-8a48-de1b5c4da315 500 131 - 15.260 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:49:03:493[39m ]  [35mPUT /movies/7b23d425-1c75-45db-8a48-de1b5c4da315 200 355 - 55.942 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:49:43:4943[39m ]  [31mName : Error on deleting movies Error | Descriptiion : WHERE parameter "user" has invalid "undefined" value | Status Code : 500 | IsOperational : true[39m
+[ [36m2022-11-29 16:49:43:4943[39m ]  [35mDELETE /movies/7b23d425-1c75-45db-8a48-de1b5c4da315 500 131 - 4.184 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:49:58:4958[39m ]  [35mDELETE /movies/7b23d425-1c75-45db-8a48-de1b5c4da315 200 53 - 43.785 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:50:40:5040[39m ]  [35mGET /movies/7b23d425-1c75-45db-8a48-de1b5c4da315 404 182 - 1.119 ms[39m
+[35m[39m
+[ [36m2022-11-29 16:50:56:5056[39m ]  [35mGET /movies 200 320 - 5.681 ms[39m
+[35m[39m

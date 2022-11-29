@@ -2,15 +2,17 @@ const { APIError, STATUS_CODES } = require("../../utils/error/app-errors");
 const { db } = require("../connection");
 
 class MovieRepository {
-	async CreateMovie({ name, rating, genre, cast, relaseDate, user, id }) {
+	async CreateMovie({ name, rating, genre, cast, releaseDate, user, id }) {
 		try {
+			console.log({ name, rating, genre, cast, releaseDate, user, id });
+
 			const movie = await db.Movies.create({
 				name,
 				rating,
 				id,
 				genre,
 				cast,
-				relaseDate,
+				releaseDate,
 				user,
 			});
 			return movie;
@@ -23,16 +25,17 @@ class MovieRepository {
 		}
 	}
 
-	async UpdateMovies({ name, rating, genre, cast, relaseDate, user, id }) {
+	async UpdateMovies({ name, rating, genre, cast, releaseDate, user, id }) {
 		try {
+			// console.log({ name, rating, genre, cast, releaseDate, user, id });
 			const existingMovie = await db.Movies.findOne({
-				where: { id: id },
+				where: { id: id, user: user },
 			});
 			existingMovie.name = name;
 			existingMovie.rating = rating;
 			existingMovie.genre = genre;
 			existingMovie.cast = cast;
-			existingMovie.relaseDate = relaseDate;
+			existingMovie.releaseDate = releaseDate;
 			existingMovie.user = user;
 			const movie = await existingMovie.save();
 			return movie;
@@ -45,10 +48,10 @@ class MovieRepository {
 		}
 	}
 
-	async DeleteMovies({ id }) {
+	async DeleteMovies({ id, user }) {
 		try {
 			const existingMovie = await db.Movies.findOne({
-				where: { id: id },
+				where: { id: id, user: user },
 			});
 			await existingMovie.destroy();
 			return { status: "Deleted" };

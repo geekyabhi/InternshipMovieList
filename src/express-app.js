@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { user } = require("./api");
+const { user, movies } = require("./api");
 const ErrorHandler = require("./utils/error/error-handler");
 const morganMiddleware = require("./middleware/morgan");
 module.exports = async (app, channel) => {
@@ -10,6 +10,7 @@ module.exports = async (app, channel) => {
 	app.use(cors());
 
 	user(app);
+	movies(app);
 
 	app.use("/status", (req, res, next) => {
 		res.send("Customer service running properly");

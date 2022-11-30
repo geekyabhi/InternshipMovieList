@@ -46,11 +46,7 @@ function Movie({ item, movies, setMovies }) {
 				releaseDate,
 			};
 			setLoading(true);
-			const data = await axios.put(
-				`${url}/movies/${item.id}`,
-				body,
-				config
-			);
+			await axios.put(`${url}/movies/${item.id}`, body, config);
 			setLoading(false);
 		} catch (err) {
 			setLoading(false);

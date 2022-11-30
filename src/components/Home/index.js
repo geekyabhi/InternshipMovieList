@@ -41,6 +41,7 @@ function Home() {
 			navigate("/login");
 		}
 		loadList();
+		// eslint-disable-next-line
 	}, [userInfo]);
 
 	return (

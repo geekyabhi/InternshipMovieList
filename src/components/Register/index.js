@@ -1,10 +1,12 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { url } from "../../utilities";
 import Loader from "../Loader";
 import Message from "../Message";
 import styles from "./style.module.css";
+import { Link, useNavigate } from "react-router-dom";
+
 function Register() {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -13,10 +15,22 @@ function Register() {
 	const [success, setSuccess] = useState(false);
 	const [error, setError] = useState(null);
 
+	const navigate = useNavigate();
+
+	const localData = localStorage.getItem("movielistinfo");
+	const userInfo = localData ? JSON.parse(localData) : null;
+
 	setTimeout(() => {
 		setError(null);
 		setSuccess(null);
 	}, 3000);
+
+	useEffect(() => {
+		if (userInfo) {
+			navigate("/");
+		}
+		// eslint-disable-next-line
+	}, [userInfo]);
 
 	const submitRegister = async (e) => {
 		e.preventDefault();
@@ -91,6 +105,11 @@ function Register() {
 						</Button>
 					)}
 				</Form>
+				<div className="mt-3">
+					<p>
+						Already have an account ? <Link to="/login">Login</Link>
+					</p>
+				</div>
 			</div>
 		</div>
 	);

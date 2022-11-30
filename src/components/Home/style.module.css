@@ -1,0 +1,13 @@
+.box {
+	display: flex;
+}
+
+.left {
+	border: 1px #000 solid;
+	flex: 1 1 auto;
+}
+
+.right {
+	border: 1px #000 solid;
+	flex: 1 1 auto;
+}

@@ -3,7 +3,7 @@ import Movie from "../Movie";
 function ViewMovies(props) {
 	return (
 		<div>
-			{props.movies.map((item) => (
+			{props.movies?.map((item) => (
 				<Movie
 					item={item}
 					key={item.id}

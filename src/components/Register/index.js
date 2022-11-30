@@ -81,6 +81,7 @@ function Register() {
 							}}
 						/>
 					</Form.Group>
+
 					<Form.Group controlId="formBasicPassword">
 						<Form.Label>Password</Form.Label>
 						<Form.Control

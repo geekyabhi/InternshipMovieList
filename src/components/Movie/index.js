@@ -178,7 +178,7 @@ function Movie({ item, movies, setMovies }) {
 				Update
 			</Button>{" "}
 			<Button
-				variant="secondary"
+				variant="danger"
 				size="sm"
 				active
 				onClick={submitDelete}

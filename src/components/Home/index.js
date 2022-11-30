@@ -42,7 +42,7 @@ function Home() {
 		}
 		loadList();
 		// eslint-disable-next-line
-	}, [userInfo]);
+	}, []);
 
 	return (
 		userInfo && (

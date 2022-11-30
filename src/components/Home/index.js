@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 function Home() {
 	const [movies, setMovies] = useState([]);
 
-	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState("");
+	const [, setLoading] = useState(false);
+	const [, setError] = useState("");
 
 	const localData = localStorage.getItem("movielistinfo");
 	const userInfo = localData ? JSON.parse(localData) : null;

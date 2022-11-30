@@ -90,7 +90,7 @@ function Login() {
 							className={styles.btn}
 							disabled={loading}
 						>
-							Signup
+							Login
 						</Button>
 					)}
 				</Form>

@@ -1,7 +1,6 @@
 
 ## Live Links -
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/15798447-2f7593a2-52a8-44ed-a027-bda6521435f5?action=collection%2Ffork&collection-url=entityId%3D15798447-2f7593a2-52a8-44ed-a027-bda6521435f5%26entityType%3Dcollection%26workspaceId%3D2e4fcb4f-7df9-4eed-9c86-98718593d8c2#?env%5BRestaurant%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL3Jlc3RhdXJhbnQtc3RyaWtlLmhlcm9rdWFwcC5jb20iLCJlbmFibGVkIjp0cnVlfSx7ImtleSI6InRva2VuIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlfSx7ImtleSI6InZhcmlhYmxlX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZX1d)
-
+Create a Environemnt in the postman with valiable ``` url``` and ```token``` in which url is the link on which backend is running and leave the token empty
 - **Postman Collections:** [https://www.getpostman.com/collections/7d7254709f84484d0c77](https://www.getpostman.com/collections/7d7254709f84484d0c77)
 
 ## Setup Instructions
